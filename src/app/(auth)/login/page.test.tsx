@@ -33,14 +33,14 @@ describe("LoginPage", () => {
   it("renders login title and description", () => {
     render(<LoginPage />);
 
-    expect(screen.getByText("Login")).toBeInTheDocument();
-    expect(screen.getByText(/enter your email below/i)).toBeInTheDocument();
+    expect(screen.getByText(/welcome back/i)).toBeInTheDocument();
+    expect(screen.getByText(/sign in to your munda account/i)).toBeInTheDocument();
   });
 
   it("renders link to register page", () => {
     render(<LoginPage />);
 
-    const registerLink = screen.getByRole("link", { name: /register/i });
+    const registerLink = screen.getByRole("link", { name: /create one free/i });
     expect(registerLink).toBeInTheDocument();
     expect(registerLink).toHaveAttribute("href", "/register");
   });

@@ -27,23 +27,23 @@ describe("RegisterPage", () => {
   it("renders registration form with all fields", () => {
     render(<RegisterPage />);
 
-    expect(screen.getByLabelText(/^email$/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/^email address$/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/^password$/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/confirm password/i)).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /create account/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /create munda account/i })).toBeInTheDocument();
   });
 
   it("renders registration title and description", () => {
     render(<RegisterPage />);
 
-    expect(screen.getByText("Register")).toBeInTheDocument();
-    expect(screen.getByText(/create an account/i)).toBeInTheDocument();
+    expect(screen.getByText(/create your account/i)).toBeInTheDocument();
+    expect(screen.getByText(/join thousands/i)).toBeInTheDocument();
   });
 
   it("renders link to login page", () => {
     render(<RegisterPage />);
 
-    const loginLink = screen.getByRole("link", { name: /login/i });
+    const loginLink = screen.getByRole("link", { name: /sign in/i });
     expect(loginLink).toBeInTheDocument();
     expect(loginLink).toHaveAttribute("href", "/login");
   });
@@ -71,7 +71,7 @@ describe("RegisterPage", () => {
 
     expect(screen.getByText("Check your email")).toBeInTheDocument();
     expect(screen.getByText("Check your email for a confirmation link.")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /back to login/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /back to sign in/i })).toBeInTheDocument();
   });
 
   it("shows loading state when pending", async () => {

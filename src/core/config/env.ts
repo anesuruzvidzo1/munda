@@ -39,6 +39,9 @@ export const env = {
 
   // Database config (required)
   DATABASE_URL: getRequiredEnv("DATABASE_URL"),
+
+  // AI config (required)
+  ANTHROPIC_API_KEY: getRequiredEnv("ANTHROPIC_API_KEY"),
 } as const;
 
 export type Env = typeof env;
