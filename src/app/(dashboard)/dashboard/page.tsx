@@ -20,7 +20,7 @@ export default async function DashboardPage() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <Card className="border-green-200 bg-green-50/50 dark:border-green-900 dark:bg-green-950/20 md:col-span-2 lg:col-span-2">
+        <Card className="border-primary/20 bg-primary/5 md:col-span-2 lg:col-span-2">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Sprout className="h-5 w-5 text-green-600" />
@@ -35,7 +35,7 @@ export default async function DashboardPage() {
             <p className="text-sm text-muted-foreground mb-4">
               Powered by Claude AI. Get actionable, region-specific advice in seconds.
             </p>
-            <Button asChild className="bg-green-600 hover:bg-green-700 text-white">
+            <Button asChild>
               <a href="/dashboard/advisory">Open Crop Advisory &rarr;</a>
             </Button>
           </CardContent>

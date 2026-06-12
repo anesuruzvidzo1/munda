@@ -112,7 +112,7 @@ export function AdvisoryForm() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Sprout className="h-5 w-5 text-green-600" />
+            <Sprout className="h-5 w-5 text-primary" />
             Ask the Advisor
           </CardTitle>
           <CardDescription>
