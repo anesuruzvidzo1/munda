@@ -21,7 +21,7 @@ export default async function DashboardLayout({ children }: DashboardLayoutProps
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b">
+      <header className="border-b bg-card">
         <div className="container mx-auto flex h-14 items-center justify-between px-4">
           <nav className="flex items-center gap-6">
             <a href="/dashboard" className="font-semibold">
