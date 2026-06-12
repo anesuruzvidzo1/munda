@@ -45,11 +45,11 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(0.98 0.008 90);
+  --background: oklch(0.92 0.03 118);
   --foreground: oklch(0.15 0.025 145);
-  --card: oklch(0.995 0.004 90);
+  --card: oklch(0.97 0.015 110);
   --card-foreground: oklch(0.15 0.025 145);
-  --popover: oklch(0.995 0.004 90);
+  --popover: oklch(0.97 0.015 110);
   --popover-foreground: oklch(0.15 0.025 145);
   --primary: oklch(0.42 0.14 148);
   --primary-foreground: oklch(0.98 0 0);
