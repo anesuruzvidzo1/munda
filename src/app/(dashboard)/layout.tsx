@@ -27,10 +27,10 @@ export default async function DashboardLayout({ children }: DashboardLayoutProps
             <a href="/dashboard" className="font-semibold">
               Dashboard
             </a>
-            <a
-              href="/dashboard/projects"
-              className="text-muted-foreground hover:text-foreground"
-            >
+            <a href="/dashboard/advisory" className="text-muted-foreground hover:text-foreground">
+              Crop Advisory
+            </a>
+            <a href="/dashboard/projects" className="text-muted-foreground hover:text-foreground">
               Projects
             </a>
           </nav>
