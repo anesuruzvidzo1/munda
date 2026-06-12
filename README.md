@@ -2,6 +2,8 @@
 
 > AI-powered crop advisory platform for Zimbabwean smallholder farmers and agricultural extension workers.
 
+**Live demo:** https://munda-eight.vercel.app — create a free account and ask the advisor about your crops.
+
 ## What is Munda?
 
 Munda helps farmers make better decisions by providing AI-powered crop diagnosis, yield prediction, and personalized farming recommendations. Farmers describe their crop conditions in plain language and get instant, actionable advice powered by the Anthropic Claude API.
