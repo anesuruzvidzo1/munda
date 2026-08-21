@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { ZodError } from "zod/v4";
 
 import { getLogger } from "@/core/logging";
-import { ProjectError } from "@/features/projects";
+import { ProjectError } from "@/features/projects/errors";
 import { createErrorResponse, type ErrorResponse } from "@/shared/schemas/errors";
 
 const logger = getLogger("api.errors");

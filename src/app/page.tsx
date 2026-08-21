@@ -33,9 +33,8 @@ export default function Home() {
           Farming guidance that fits your field.
         </h1>
         <p className="max-w-xl text-lg text-muted-foreground">
-          Munda gives smallholder farmers plain language advice on when to plant,
-          when to harvest, and what diseases to watch for, built around local
-          growing conditions.
+          Munda gives smallholder farmers plain language advice on when to plant, when to harvest,
+          and what diseases to watch for, built around local growing conditions.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Link

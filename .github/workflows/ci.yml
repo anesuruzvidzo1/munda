@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  # Placeholders only. src/core/config/env.ts validates at import time, so the
+  # build and the test run both need these present. No real credentials.
+  NEXT_PUBLIC_SUPABASE_URL: http://localhost:54321
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: test-anon-key-not-a-real-credential
+  DATABASE_URL: postgresql://postgres:postgres@localhost:54322/postgres
+  ANTHROPIC_API_KEY: test-key-not-a-real-credential
+
+jobs:
+  check:
+    name: Lint, types, tests, build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Install
+        run: bun install --frozen-lockfile
+      - name: Lint
+        run: bun run lint
+      - name: Type check
+        run: bunx tsc --noEmit
+      - name: Test
+        run: bun test
+      - name: Build
+        run: bun run build
