@@ -1,6 +1,11 @@
 import pino from "pino";
 
-const isDevelopment = process.env["NODE_ENV"] !== "production";
+const nodeEnv = process.env["NODE_ENV"] ?? "development";
+
+// Pretty printing is a development affordance. It runs through pino-pretty, which
+// pino loads as a transport on a worker thread, so enable it only in real local
+// development. Test runners and every deployed environment take plain JSON.
+const usePrettyTransport = nodeEnv === "development";
 const logLevel = process.env["LOG_LEVEL"] ?? "info";
 const serviceName = process.env["APP_NAME"] ?? "ai-opti-nextjs-starter";
 
@@ -15,9 +20,9 @@ export const logger = pino({
   level: logLevel,
   base: {
     service: serviceName,
-    environment: process.env["NODE_ENV"] ?? "development",
+    environment: nodeEnv,
   },
-  ...(isDevelopment
+  ...(usePrettyTransport
     ? {
         transport: {
           target: "pino-pretty",
